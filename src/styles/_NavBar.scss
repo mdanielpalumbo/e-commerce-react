@@ -1,0 +1,31 @@
+header{
+    width:100vw;
+    height:12vh;
+    display:flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items:center;
+    background-color:#121212;
+}
+nav{
+    margin-right:5vw;
+    a{
+        margin-right:1vw;
+        margin-left:1vw;
+        text-decoration:none;
+        color:white;
+        transition: color 0.4s;
+        text-transform:uppercase;
+        letter-spacing: 0.04rem;
+    }
+    a:active{
+        color:white;
+    }
+    a:hover{
+        color:#E91E63;
+    }
+}
+.logo{
+    margin-left:5vw;
+    color:white;
+}
