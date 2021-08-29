@@ -8,7 +8,7 @@ header{
     z-index:2;
     box-shadow: 0 0 5px black;
     font-family: 'Roboto', sans-serif;
-    background-color: #181818;
+    background-color: #161616;
 }
 .side{
     width:15%;
@@ -31,17 +31,15 @@ nav{
         margin-right:1vw;
         margin-left:1vw;
         text-decoration:none;
-        color:#E91E63;
+        color:white;
         transition: color 0.4s;
         text-transform:uppercase;
         letter-spacing: 0.04rem;
         font-weight: 600;
     }
-    a:active{   
-        color:white;
-    }
     a:hover{                                                                                    
-        color:white;
+        color:#E91E63;
+        transition:all 0.8s;
     }
 }
 .logo{
@@ -50,14 +48,20 @@ nav{
     cursor:default;
 }
 .cartIcon{
-    height:30px;
-    width:30px;
+    height:35px;
+    width:35px;
     background:transparent;
     border-color:transparent;
+    color:white;
+    cursor:default;
+}
+.cartIcon:hover{
+    cursor:default;
+    color:#E91E63;
+    transition: all 1s;
 }
 .cart{
     display:flex;
     justify-content: center;
     align-items:center;
-
 }

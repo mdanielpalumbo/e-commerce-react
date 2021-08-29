@@ -15,7 +15,7 @@ const NavBar = () => {
                 </nav>
             </div>
             <div className="side cart">
-                <button type="button"><FaOpencart className="cartIcon"/></button>
+                <button type="button" className="cartIcon"><FaOpencart className="cartIcon"/></button>
             </div> 
         </header>
         </>
