@@ -18,8 +18,8 @@ export const ItemListContainer = () => {
     },[])
     return(
         <>
-        <div>
-            {loading ? <h2>Cargando...</h2>:
+        <div className="prodBody">
+            {loading ? <h2 className="loading">Cargando...</h2>:
             <ItemList stock={data}/>}
         </div>
         </>

@@ -3,10 +3,10 @@ import {Item} from './Item'
 export const ItemList = ({stock =[]}) => {
     return (
         <>
-            <h2>
+            <h2 className="prodTitle">
                 Productos
             </h2>
-            <div>
+            <div className="prodList">
                 {stock.map((prod) => <Item {...prod}/>)}
             </div>
         </>

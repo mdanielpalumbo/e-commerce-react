@@ -5,36 +5,90 @@ export const data = [
         id: 1,
         category: 'motherboard',
         manufacturer: 'asus',
-        model: 'a320m-k',
+        model: 'A320m-k',
         socket: 'am4',
         price: '7500',
-        img:'#'
+        img: "/images/asA320mk.jpg"
     },
     {
         id:2,
         category:'motherboard',
         manufacturer: 'gigabyte',
         socket: 'am4',
-        model: 'a320m',
+        model: 'A320m S2h',
         price: '7100',
-        img: '#'
+        img: "/images/GA-A320M-S2H_800.jpg"
     },
     {
         id:3,
-        category:'processor',
-        manufacturer: 'amd',
+        category:'motherboard',
+        manufacturer: 'asus',
         socket: 'am4',
-        model: 'Ryzen 5 3400g',
-        price: '55000',
-        img: '#'
+        model: 'B450m-a Prime II',
+        price: '9500',
+        img: "/images/asB450II.jpg"
     },
     {
         id:4,
-        category:'processor',
+        category: 'motherboard',
+        manufacturer: 'gigabyte',
+        socket: '1151',
+        model: 'H310m m.2',
+        price: '7000',
+        img: "/images/GA-H310M-M.2_800.jpg"
+    },
+    {
+        id:5,
+        category: 'motherboard',
+        manufacturer: 'gigabyte',
+        socket: '1151',
+        model: 'B365m Ds3h',
+        price: '9500',
+        img: "/images/gaB365M.jpg"
+    },
+    {
+        id:6,
+        category: 'processor',
         manufacturer: 'amd',
         socket: 'am4',
-        model: 'Rizen 5 5600g',
-        price: '46000',
-        img: '#'
-    }
+        model: 'ryzen 5 3400g',
+        price: '55000',
+        img: "/images/ry5Box.jpg"
+    },
+    {
+        id:7,
+        category: 'processor',
+        manufacturer: 'amd',
+        socket: 'am4',
+        model: 'ryzen 5 3600g',
+        price: '48000',
+        img: "/images/ry5Box.jpg"
+    },
+    {
+        id: 8,
+        category: 'processor',
+        manufacturer:'amd',
+        socket: 'am4',
+        model: 'ryzen 7 5700g',
+        price: '60000',
+        img: "/images/ry7Box.jpg"
+    },
+    {
+        id: 9,
+        category:'processor',
+        manufacturer:'amd',
+        socket: 'am4',
+        model: 'ryzen 9 5950x',
+        price: '112000',
+        img: "/images/ry9Box.jpg"
+    },
+    {
+        id:10,
+        category:'processor',
+        manufacturer:'intel',
+        socket:'1151',
+        model:'i3-9300',
+        price:'23300',
+        img:"/images/i3.jpg"
+    }  
 ]

@@ -1,0 +1,13 @@
+.prodList{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: center;
+    flex-basis:50%;
+}
+.prodTitle{
+    margin-top:35px;
+    margin-bottom:5px;
+    text-transform:uppercase;
+    letter-spacing: 2px;
+    margin-left:7.5vw;
+}

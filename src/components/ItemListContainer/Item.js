@@ -2,14 +2,19 @@ import React from 'react'
 
 export const Item = ({id, manufacturer,model,socket,price,img}) => {
     return (
-    <div>
-        <div className="imgContainer">
-            {img}
+    <>
+        <div className="prodCard">
+            <div className="imgContainer">
+                <img src={img}/>
+            </div>
+            <div className="prodDesc">
+                <h4>{manufacturer} {model}</h4>
+                <p>socket: {socket}</p>
+                <p className="price">$ {price}</p>
+                <button>Agregar al carro</button>
+            </div>
         </div>
-        <h3>{model}</h3>
-        <p>{socket}</p>
-        <p>{price}</p>
-    </div>
+    </>
     )
 }
 
