@@ -2,13 +2,50 @@
     display:flex;
     flex-flow:row wrap;
     justify-content: center;
-    flex-basis:50%;
-    background-color: #161616;
+    background-color: #181818;
+    min-height:76vh;
+    padding: 0 20vh;
 }
-.prodTitle{
-    margin-top:35px;
-    margin-bottom:5px;
+.title{
+    margin-left:4.5%;
+    margin-top:2%;
     text-transform:uppercase;
     letter-spacing: 2px;
-    margin-left:7.5vw;
+    background-color: #181818;
+}
+.backBtn, .filterBtn{
+    margin-right:3%;
+    margin-top:2%;
+    background-color: transparent;
+    border:none;
+    color:white;
+}
+.backIcon, .filterIcon{
+    height:25px;
+    width:25px;
+}
+.filtersBody{
+    height:80vh;
+}
+
+.banner{
+    height:10vh;
+    width:100%;
+    background-color: #181818;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.filters{
+    height:70vh;
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.filter{
+    text-decoration: none;
+    color:white;
+    text-transform: uppercase;
+    font-size:1rem;
 }

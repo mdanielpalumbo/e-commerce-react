@@ -1,17 +1,16 @@
 import React from 'react'
 import {FaOpencart} from 'react-icons/fa'
-
+import { Link } from 'react-router-dom'
 const NavBar = () => {
     return (
         <>
         <header>
             <div className="side"></div>
             <div className="center">
-                <a href ="#" className="logo"><h2>Tienda Virtual</h2></a>
+                <Link to="/" className="logo"><h2>Tienda Virtual</h2></Link>
                 <nav className="menu">
-                        <a href="#">Productos</a>
-                        <a href="#">Arma tu PC</a>
-                        <a href="#">Contactanos</a>    
+                        <Link to="/">Productos</Link>
+                        <Link to="/build">Arma tu PC</Link>
                 </nav>
             </div>
             <div className="side cart">
