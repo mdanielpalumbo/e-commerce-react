@@ -22,6 +22,8 @@ React-router-dom
 
 react-icons
 
+sweet-alert (swal)
+
 ## Aplicación 
 
 (https://github.com/mdanielpalumbo/e-commerce-react)
