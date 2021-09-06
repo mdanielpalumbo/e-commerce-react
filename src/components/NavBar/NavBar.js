@@ -14,7 +14,7 @@ const NavBar = () => {
                 </nav>
             </div>
             <div className="side cart">
-                <button type="button" className="cartIcon"><FaOpencart className="cartIcon"/></button>
+                <Link to="/cart" className="cartIcon"><FaOpencart className="cartIcon"/></Link>
             </div> 
         </header>
         </>

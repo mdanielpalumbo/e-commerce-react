@@ -3,7 +3,7 @@ import {Item} from './Item'
 import {FaFilter, FaAngleLeft} from 'react-icons/fa'
 import { Link, useParams } from 'react-router-dom'
 
-export const ItemList = ({stock =[]}) => {
+export const ItemList = ({stock}) => {
     const [show, setShow] = useState(false)
     const clickShow = () => {
         setShow(!show)
