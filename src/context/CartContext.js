@@ -1,32 +1,32 @@
 import { createContext, useState } from 'react'
 
-
-
-
 export const CartContext = createContext()
 
 export const CartProvider = ({children}) => {
-
     const [cart, setCart] = useState([])
-
     const addToCart = (prod) => {
         const exist = cart.some(s => s.id === prod.id)
         if (exist){
             const newCart = cart.map(s => {
                 if(s.id === prod.id){
-                    s.count ++
+                    s.count = s.count + prod.count
                 }
                 return s
             })
-            setCart([...newCart])
+            setCart(newCart)
         }else{
-            prod.count = 1
             setCart([...cart, prod])
         }
     }
+    const cartDelete = (i) => {
+        setCart(cart.filter(prod => prod.id !== i))
+        console.log(cart)
+    }
+
     return (
-        <CartContext.Provider value={{cart, addToCart}}>
+        <CartContext.Provider value={{cart, addToCart, cartDelete}}>
             {children}
         </CartContext.Provider>
     )
+
 }

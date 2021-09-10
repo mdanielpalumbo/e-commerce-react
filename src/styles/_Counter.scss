@@ -1,0 +1,105 @@
+.checkout{
+    height: 60%;
+    width:90%;
+    display:flex;
+    flex-flow:column nowrap;
+    margin-right:10%;
+    padding:2%;
+
+    .counterCont{
+        height:30%;
+        width:100%;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        
+        .counter{
+            padding-top:1%;
+            height:30%;
+            width:25%;
+            display:flex;
+            flex-flow:row nowrap;
+            justify-content:center;
+            align-items:center;
+            background-color:#202020;
+            box-shadow: 3px 3px 5px #080808;
+            border-radius:10px;
+        
+            .plus, .minus{
+                width: 28%;
+                height:100%;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                border:none;
+                background:transparent;
+                color: #F7F7F7;
+            }
+
+            .count{
+                width:44%;
+                height:100%;
+                display:flex;
+                justify-content:center;
+                align-items:center;
+                border-left:1px solid #161616;
+                border-right:1px solid #161616;
+                background-color: #F7F7F7;
+                color: #161616;
+            }
+        }
+    }
+    .addBtn {
+        height:60%;
+        width:100%;
+        padding-top:10%;
+        display:flex;
+        align-items:start;
+        justify-content: center;
+        .addTo{
+            height:30%;
+            width:65%;
+            border:none;
+            background-color:#E91E63;
+            color:#F7F7F7;
+            text-transform:uppercase;
+            font-size:0.9rem;
+            letter-spacing: 1px;
+            font-weight:600;
+            border-radius:2%;
+            box-shadow: 3px 3px 5px #080808;
+        }
+
+    }
+}
+.finish{
+    
+    height:60%;
+    width:90%;
+    margin-right:10%;
+    padding:2%;
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content:space-around;
+    align-items:center;
+    padding-top:10%;
+    padding-bottom:10%;
+    
+    .finBtn{
+        height:20%;
+        width:65%;
+        border:none;
+        background-color:#E91E63;
+        color:#F7F7F7;
+        text-transform:uppercase;
+        font-size:0.9rem;
+        letter-spacing: 1px;
+        font-weight:600;
+        border-radius:2%;
+        box-shadow: 3px 3px 5px #080808;
+        text-decoration: none;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
