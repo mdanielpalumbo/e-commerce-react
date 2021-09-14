@@ -1,6 +1,6 @@
 import React from 'react'
-import {FaCartArrowDown} from 'react-icons/fa'
 import { Link } from 'react-router-dom'
+import { CartWidget } from '../CartWidget/CartWidget'
 const NavBar = () => {
     return (
         <>
@@ -14,7 +14,7 @@ const NavBar = () => {
                 </nav>
             </div>
             <div className="side cart">
-                <Link to="/cart" className="cartIcon"><FaCartArrowDown className="cartIcon"/></Link>
+                <Link to="/cart" className="cartWidget"><CartWidget/></Link>
             </div> 
         </header>
         </>

@@ -6,7 +6,7 @@ import swal from 'sweetalert'
 
 export const Cart = () => {
 
-    const { cartDelete, cart,subst,add} = useContext(CartContext)
+    const { cartDelete, cart} = useContext(CartContext)
     const [total,setTotal] = useState(0)
     const totalPrice = () => {
         setTotal(cart.reduce((acc, prod) => parseInt(acc) + parseInt(prod.price*prod.count), 0))
@@ -21,8 +21,8 @@ export const Cart = () => {
         <div className="cartBody">
             <h2 className="cartTitle"> CARRITO </h2>
             <div className = "cartCont">
-                { false ? 
-                        <div>
+                { cart.length === 0 ? 
+                        <div className="cardsCont empty">
                             <h3>el carrito está vacio.</h3>
                             <p>vuelve cuando elijas un producto.</p>
                         </div> 
@@ -31,7 +31,7 @@ export const Cart = () => {
                             {cart.map(prod => (
                                 <div key={prod.id} value={cart.indexOf(prod)}className="cartCard">
                                     <div className="cartImgCont">
-                                        <img src={prod.img}/>
+                                        <img alt="product" src={prod.img}/>
                                     </div>
                                     <p className="model">{prod.model}</p>
                                     <div className="cCountCont">    

@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext, useState } from 'react'
 import {FaPlus,FaMinus} from 'react-icons/fa'
 import { CartContext } from '../../context/CartContext'
 import {Link} from 'react-router-dom'

@@ -22,12 +22,10 @@ export const ItemListContainer = () => {
     },[catId])
 
     return(
-        <>
         <div className="prodBody">
             {loading ? <h2 className="loading">Cargando...</h2>:
             <ItemList stock={data}/>}
         </div>
-        </>
     )
 }
 

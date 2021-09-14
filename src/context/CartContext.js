@@ -22,7 +22,7 @@ export const CartProvider = ({children}) => {
         setCart(cart.filter(prod => prod.id !== i))
         console.log(cart)
     }
-
+    
     return (
         <CartContext.Provider value={{cart, addToCart, cartDelete}}>
             {children}

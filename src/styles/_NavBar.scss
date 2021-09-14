@@ -14,12 +14,12 @@ header{
     left:0;
 }
 .side{
-    width:15%;
+    width:20%;
     height:100%;
 }
 .center{
-    height:70%;
-    width:70%;
+    height:60%;
+    width:60%;
     display:flex;
     flex-flow:column nowrap;
     justify-content:space-between;
@@ -52,22 +52,32 @@ nav{
     cursor:default;
     font-size:1.5rem;
 }
-.cartIcon{
-    font-size:35px;
+.cartWidget{
+    display:flex;
+    align-items:center;
+    justify-content: space-around;
+    padding-right:10px;
+    text-decoration: none;
+    flex-flow:row nowrap;
+    font-size:25px;
     background:transparent;
     border-color:transparent;
     color:white;
     cursor:default;
     transition: all 0.4s ease-out;
+    width:100px;
 }
-.cartIcon:hover{
+.cartWidget:hover{
     cursor:default;
     color:#E91E63;
     transition: all 0.4s ease;
 }
+.cartIcon{
+    font-size:35px;
+}
 .cart{
     display:flex;
-    justify-content: center;
+    justify-content:center;
     align-items:center;
 }
 
