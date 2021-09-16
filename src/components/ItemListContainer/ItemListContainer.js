@@ -1,25 +1,40 @@
 import { React , useEffect, useState } from 'react'
 import { ItemList } from './ItemList'
-import { dataCollector } from '../../data/dataCollector'
 import { useParams } from 'react-router'
-
+import { collection, getDocs, where,query } from 'firebase/firestore'
+import {db} from '../../firebase/config'
 export const ItemListContainer = () => {
 
     const [loading, setLoading] = useState(false)
     const [data, setData] = useState([])
     const {catId} = useParams()
     
+
     useEffect(() => {
-        setLoading(true)
-        dataCollector()
-            .then(res => {
-                const filtered = res.filter( prod => prod.category === catId)
-                {catId ? setData(filtered) : setData(res)}
+        const prodsDb = collection(db, 'productos')
+        setLoading(true)    
+        if (catId) {
+            const filteredDb = query(collection(db,'productos'), where('category', '==', catId))
+            getDocs(filteredDb)
+            .then((res) => {
+                const products = res.docs.map((doc) => ({...doc.data(), id: doc.id}))
+                setData(products)
+            })
+            .finally(()=> {
+                setLoading(false)
+        })} else {
+            
+            getDocs(prodsDb)
+            .then((res) => {
+                const products = res.docs.map((doc) => ({...doc.data(), id: doc.id}))
+                setData(products)
             })
             .finally(()=> {
                 setLoading(false)
             })
-    },[catId])
+        }
+        return(() => {})
+    }, [catId, setLoading])
 
     return(
         <div className="prodBody">

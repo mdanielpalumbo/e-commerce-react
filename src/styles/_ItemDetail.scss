@@ -48,7 +48,7 @@
                 height:88%;
                 width:88%;
                 display:flex;
-                align-items:start;
+                align-items:flex-start;
                 padding-top:4%;
                 position:relative;
                 margin-right:12%;
@@ -95,7 +95,7 @@
                     box-shadow: 0 2px 0 #222222;
                     padding:2%;
                     display:flex;
-                    justify-content:start;
+                    justify-content:flex-start;
                     align-items:center;
                 }
 
@@ -116,7 +116,7 @@
                     width:100%;
                     padding-top:5%;
                     display:flex;
-                    align-items:start;
+                    align-items:flex-start;
                     justify-content: center;
                     .addTo{
                         height:20%;

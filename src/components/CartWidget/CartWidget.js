@@ -8,7 +8,7 @@ export const CartWidget = () => {
     const cartCount = () => {
         setCount(cart.reduce((acc, prod) => acc + prod.count, 0))
     }
-    useEffect((cart)=>{
+    useEffect(()=>{
         cartCount()
     },[cart])
     return (

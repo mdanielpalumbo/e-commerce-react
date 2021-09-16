@@ -23,7 +23,24 @@
         border-radius:0.5%;
         position:relative;
         display:flex;
-        justify-content:start;
+        justify-content:flex-start;
+        .empty{
+            height:auto;
+            width:55%;
+            padding:1%;
+            background-color:#161616;
+            display:flex;
+            flex-flow: column nowrap;
+            justify-content: space-around;
+            h2{
+                font-size:2rem;
+                text-transform:uppercase;
+            }
+            .backLink{
+                color:#E91E63;
+                text-decoration: none;
+            }
+        }
         .cardsCont{
             width:55%;
             height:auto;
@@ -108,7 +125,7 @@
                 }
                 .cartDelete{
                     display:flex;
-                    justify-content: end;
+                    justify-content: flex-end;
                     align-items:center;
                     margin:0 2%;
                     height:100%;

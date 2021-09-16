@@ -1,7 +1,9 @@
 import { React, useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { ItemDetail } from './ItemDetail'
-import { dataCollector } from '../../data/dataCollector'
+import {db} from '../../firebase/config'
+import { collection, getDocs } from 'firebase/firestore'
+
 export const ItemDetailContainer = () => {
 
     const { itemId } = useParams()
@@ -10,11 +12,12 @@ export const ItemDetailContainer = () => {
 
     useEffect(()=>{
         setLoading(true)
-        dataCollector()
-            .then ( res => {
-                setItem( res.find( prod => prod.id === parseInt(itemId)))
+        const prodsDb = collection(db, 'productos')
+        getDocs(prodsDb)
+            .then(res => {
+                setItem(res.docs.map((doc) => ({...doc.data(), id: doc.id})).find( prod => prod.id === itemId))
             })
-            .finally(()=> {
+            .finally(() => {
                 setLoading(false)
             })
     }, [itemId])

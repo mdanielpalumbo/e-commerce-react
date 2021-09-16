@@ -3,6 +3,7 @@ import { CartContext } from '../../context/CartContext'
 import { FaTrash, FaMinus, FaPlus } from 'react-icons/fa'
 import { useEffect } from 'react/cjs/react.development'
 import swal from 'sweetalert'
+import {Link} from 'react-router-dom'
 
 export const Cart = () => {
 
@@ -22,9 +23,9 @@ export const Cart = () => {
             <h2 className="cartTitle"> CARRITO </h2>
             <div className = "cartCont">
                 { cart.length === 0 ? 
-                        <div className="cardsCont empty">
-                            <h3>el carrito está vacio.</h3>
-                            <p>vuelve cuando elijas un producto.</p>
+                        <div className="empty">
+                            <h2>el carrito está vacio.</h2>
+                            <p>vuelve cuando elijas algo de la lista de <Link className="backLink"to="/">productos</Link></p>
                         </div> 
                     :
                         <div className="cardsCont">
