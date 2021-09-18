@@ -1,6 +1,6 @@
 header{
     width:100vw;
-    height:20vh;
+    height:15vh;
     display:flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -14,15 +14,20 @@ header{
     left:0;
 }
 .side{
-    width:20%;
+    width:30%;
     height:100%;
+    display:flex;
+    flex-flow:row nowrap;
+    justify-content: center;
+    align-items:center;
+    min-width:400px;
 }
 .center{
     height:60%;
-    width:60%;
+    width:50%;
     display:flex;
-    flex-flow:column nowrap;
-    justify-content:space-between;
+    flex-flow:row nowrap;
+    justify-content:flex-end;
     align-items: center;
 }
 nav{
@@ -54,18 +59,20 @@ nav{
 }
 .cartWidget{
     display:flex;
+    margin-left:2%;
     align-items:center;
     justify-content: space-around;
     padding-right:10px;
     text-decoration: none;
     flex-flow:row nowrap;
-    font-size:25px;
+    font-size:20px;
     background:transparent;
     border-color:transparent;
     color:white;
     cursor:default;
     transition: all 0.4s ease-out;
     width:100px;
+    margin-bottom:1%;
 }
 .cartWidget:hover{
     cursor:default;
@@ -77,8 +84,9 @@ nav{
 }
 .cart{
     display:flex;
-    justify-content:center;
+    justify-content:flex-start;
     align-items:center;
+    min-width:400px;
 }
 
 

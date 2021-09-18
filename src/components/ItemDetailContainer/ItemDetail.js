@@ -8,14 +8,18 @@ export const ItemDetail = ({id,model,category,img,manufacturer,socket,price,stoc
     const prod = {id, model, category, img, manufacturer, socket, price, stock}
     
     return (
-        <>
-            <h2 className="detTitle"><Link to="/" className="link">productos</Link> &gt; <Link className="link" to={`/category/${category}`}>{category}</Link> &gt; {model}</h2>
+        <>  
+            <div className="detTitCont">
+                <h2 className="detTitle"><Link to="/" className="link">productos</Link> &gt; <Link className="link" to={`/category/${category}`}>{category}</Link> &gt; {model}</h2>
+            </div>
             <div className="detail">
                 <div className="prodDet">
                     <div className="leftHalf">
-                        <h2 className="prodDetTitle">
-                            {model}
-                        </h2>
+                        <div className="pDetTitCont">
+                            <h2 className="prodDetTitle">
+                                {model}
+                            </h2>
+                        </div>
                         <div className="detImgCont">
                             <div className="picsCrumb">
 
@@ -43,7 +47,7 @@ export const ItemDetail = ({id,model,category,img,manufacturer,socket,price,stoc
                     </div>
                 </div>
                 <div className="specs">
-
+                    
                 </div>
             </div>
         </>

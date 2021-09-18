@@ -2,17 +2,14 @@ import React, { useContext, useState } from 'react'
 import {FaPlus,FaMinus} from 'react-icons/fa'
 import { CartContext } from '../../context/CartContext'
 import {Link} from 'react-router-dom'
+import { useEffect } from 'react/cjs/react.development'
 
 export const Counter = ({max, prod}) => {
 
-    const {addToCart} = useContext(CartContext)
+    const {addToCart,cart} = useContext(CartContext)
 
     const [count, setCount] = useState(1)
     const [exist, setExist] = useState(false)
-    
-    const noExist = () => {
-        setExist(false)
-    }
     
     const handleCart = () => {
         addToCart({...prod,count})
@@ -32,12 +29,16 @@ export const Counter = ({max, prod}) => {
             prod.count = count
         }
     }
-
+    useEffect(()=>{
+        if (cart.some(i => i.id === prod.id)){
+            setExist(true)
+        }
+    },[])
+    
     return (
             <>
             {exist ? 
                 <div className="finish">
-                    <button type="button" className ="finBtn" onClick={noExist}>Agregar más?</button>
                     <Link className ="finBtn" to="/cart">Terminar Compra</Link>
                 </div>
                 :

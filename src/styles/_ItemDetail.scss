@@ -1,49 +1,50 @@
-.detTitle{
-    width:90vw;
-    margin-left:5vw;
-    margin-right:5vw;
+.detTitCont{
+    width:90%;
+    margin-left:5%;
+    margin-right:5%;
     height:7vh;
     padding-left:4.5%;
-    padding-top:1.5%;
-    text-transform:uppercase;
-    letter-spacing: 2px;
-    font-size: 0.8rem;
-    font-weight:400;
+    display:flex;
+    align-items:center;
+    .detTitle{
+        text-transform:uppercase;
+        letter-spacing: 2px;
+        font-size: 0.8rem;
+        font-weight:400;
+    }
 }
-
 .detail{
     display:flex;
     flex-flow:column nowrap;
-    height:100vh;
+    height:130vh;
     width:70vw;
     background-color:#161616;
     border-radius:0.25%;
     box-shadow: 0 0 5px #121212;
-
     .prodDet{
         width:100%;
-        height:70%;
+        height:70vh;
         display:flex;
-        flex-flow:row nowrap;
-    
+        flex-flow:row nowrap;   
         .leftHalf{
             display:flex;
             flex-flow: column nowrap;
             height:100%;
             width:70%;
-            position:relative;
-
-            .prodDetTitle{
+            .pDetTitCont{
                 height:12%;
                 width:80%;
-                text-transform:uppercase;
-                padding-top:3%;
-                margin-left:10%;
-                padding-left:4%;
-                margin-right:10%;
+                margin: 0 10%;
                 box-shadow: 0 2px 0 #222222;
-            }
-
+                position:relative;
+                display:flex;
+                justify-content: flex-start;
+                align-items: center;
+                .prodDetTitle{
+                    text-transform:uppercase;
+                    font-size:1.8rem;
+                }
+            }   
             .detImgCont{
                 height:88%;
                 width:88%;
@@ -52,12 +53,10 @@
                 padding-top:4%;
                 position:relative;
                 margin-right:12%;
-
                 .picsCrumb{
                     width:18%;
                     height:100%;
                 }
-
                 img{
                     border-radius: 1%;
                     width:75%;
@@ -68,26 +67,22 @@
                     opacity:.98;
                     aspect-ratio: auto 800 / 800;
                     border-style: none;
-                    vertical-align: middle;
-                    
+                    vertical-align: middle;    
                 }
             }
         }
-
         .rightHalf{
             height:100%;
             width:30%;
             display:flex;
             flex-flow: column nowrap;
             align-items:center;
-
             .detInfo{
                 display:flex;
                 flex-flow:column nowrap;
                 align-items:center;
                 width:100%;
                 height:100%;
-
                 .rightRow{
                     height:10%;
                     width:90%;
@@ -98,7 +93,6 @@
                     justify-content:flex-start;
                     align-items:center;
                 }
-
                 .price{
                     text-align:center;
                     width:90%;
@@ -111,37 +105,14 @@
                     margin-right:15px;
                     font-size:1.4rem;
                 }
-                .addBtn {
-                    height:60%;
-                    width:100%;
-                    padding-top:5%;
-                    display:flex;
-                    align-items:flex-start;
-                    justify-content: center;
-                    .addTo{
-                        height:20%;
-                        width:65%;
-                        border:none;
-                        background-color:#E91E63;
-                        color:#F7F7F7;
-                        text-transform:uppercase;
-                        font-size:0.9rem;
-                        letter-spacing: 1px;
-                        font-weight:600;
-                        border-radius:2%;
-                        box-shadow: 3px 3px 5px #080808;
-                    }
-            
-                } 
+                
             }
         }
         
     }
-
     .specs{
-        height:30vh;
-    }
-    
+        height:30%;
+    }   
 }
 
 

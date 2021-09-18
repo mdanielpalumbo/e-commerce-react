@@ -15,6 +15,19 @@ export const Cart = () => {
     const finalise = () => {
         swal("COMPRA REALIZADA CON EXITO")
     }
+    //Acá intento hacer funcionar los botones de agregar y restar en el cart. No los tengo resueltos todavía.
+    const add = ({stock,count,id},cart) => {
+        let newCart = cart.map((prod => {
+            if (prod.id === id){
+                if (count<stock){
+                    count++
+                }
+            
+        }
+        cart = [...newCart]
+        }))
+    }
+    
     useEffect(() => {
         totalPrice()
     },[cart])
@@ -24,12 +37,12 @@ export const Cart = () => {
             <div className = "cartCont">
                 { cart.length === 0 ? 
                         <div className="empty">
-                            <h2>el carrito está vacio.</h2>
-                            <p>vuelve cuando elijas algo de la lista de <Link className="backLink"to="/">productos</Link></p>
+                            <h2>el carrito está vacio</h2>
+                            <p>Vuelve cuando elijas algo de la lista de <Link className="backLink"to="/">productos</Link></p>
                         </div> 
                     :
                         <div className="cardsCont">
-                            {cart.map(prod => (
+                            {cart.map((prod) => (
                                 <div key={prod.id} value={cart.indexOf(prod)}className="cartCard">
                                     <div className="cartImgCont">
                                         <img alt="product" src={prod.img}/>
@@ -37,9 +50,9 @@ export const Cart = () => {
                                     <p className="model">{prod.model}</p>
                                     <div className="cCountCont">    
                                         <div className="cCounter">
-                                            <button type = "button" className="minus" ><FaMinus/></button>
+                                            <button type = "button" className="minus"><FaMinus/></button>
                                             <p className="count">{prod.count}</p>  
-                                            <button type="button" className="plus" ><FaPlus/></button>
+                                            <button type="button" className="plus" onClick={() => add({...prod},cart)}><FaPlus/></button>
                                         </div>
                                     </div>
                                     <span className="price">

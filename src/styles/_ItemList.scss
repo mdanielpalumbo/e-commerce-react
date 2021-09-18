@@ -4,10 +4,11 @@
     justify-content: center;
     background-color: #181818;
     min-height:76vh;
-    padding: 0 20vh;
+    margin-bottom:5vh;
+    padding: 0 8.5vh;
 }
 .backBtn, .filterBtn{
-    margin-right:3%;
+    margin-right:10%;
     margin-top:2%;
     background-color: transparent;
     border:none;
@@ -18,7 +19,7 @@
     width:25px;
 }
 .filtersBody{
-    height:80vh;
+    height:85vh;
 }
 .banner{
     height:10vh;

@@ -56,6 +56,7 @@
     .prodLink{
         text-decoration:none;
         color:white;
+        
         .detailBtn:before{
             transition:0.5s all ease;
             position:absolute;
@@ -65,26 +66,24 @@
             bottom:0;
             opacity:0;
             content:"";
-            cursor:pointer;
             background-color:#890C4E;
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px;
         }
     }
-    
     .prodLink:hover{
-
         .detailBtn:before{
             transition: 0.5s all ease;
             left:0;
             right:0;
             opacity:1;
             z-index:-1;
-            cursor:pointer;
+            
         }  
     }
 
     .detailBtn{
+        cursor:pointer;
         height:30%;
         width:100%;
         display:flex;
