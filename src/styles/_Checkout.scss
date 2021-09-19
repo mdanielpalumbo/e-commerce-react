@@ -1,0 +1,18 @@
+.checkoutBod{
+    margin:15vh 15% 0 15%;
+    width:70vw;
+    height:85vh;
+    background-color:#181818;
+    .formBody{
+        height: 75vh;
+        width:100%;
+        .checkForm{
+            height:80%;
+            display:flex;
+            flex-flow:column nowrap;
+            align-items:flex-start;
+            justify-content: space-around;
+        }
+    }
+    
+}

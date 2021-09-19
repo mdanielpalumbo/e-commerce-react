@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { CartContext } from '../../context/CartContext'
 import { FaTrash, FaMinus, FaPlus } from 'react-icons/fa'
 import { useEffect } from 'react/cjs/react.development'
@@ -7,11 +7,8 @@ import {Link} from 'react-router-dom'
 
 export const Cart = () => {
 
-    const { cartDelete, cart} = useContext(CartContext)
-    const [total,setTotal] = useState(0)
-    const totalPrice = () => {
-        setTotal(cart.reduce((acc, prod) => parseInt(acc) + parseInt(prod.price*prod.count), 0))
-    }
+    const { cartDelete, cart, total, totalPrice} = useContext(CartContext)
+    
     const finalise = () => {
         swal("COMPRA REALIZADA CON EXITO")
     }
@@ -22,12 +19,10 @@ export const Cart = () => {
                 if (count<stock){
                     count++
                 }
-            
         }
-        cart = [...newCart]
         }))
+        cart = [...newCart]
     }
-    
     useEffect(() => {
         totalPrice()
     },[cart])
@@ -70,7 +65,11 @@ export const Cart = () => {
                         <p className="totaltxt">total:</p>
                         {total}
                     </span>
-                    <button className="finalise" onClick={finalise}>finalizar</button>
+                    <Link to="/checkout" className="finaliseLink">
+                    <div className="finalise">
+                        <p>finalizar</p>
+                    </div>
+                    </Link>
                 </div>
             </div>
         </div>

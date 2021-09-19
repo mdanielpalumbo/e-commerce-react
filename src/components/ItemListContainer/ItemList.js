@@ -24,7 +24,6 @@ export const ItemList = ({stock}) => {
                 </div>  
             :<>  
                 <div className = "banner">
-                    {/* <h2 className="title">productos</h2> */}
                     { catId ? <h2 className="title"><Link className="link" to="/">productos</Link> &gt; {catId}</h2> : <h2 className="title">productos</h2>}
                     <button type="button" onClick={clickShow} className="filterBtn"><FaFilter className="filterIcon"/></button>
                 </div>
