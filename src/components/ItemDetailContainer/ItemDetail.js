@@ -17,7 +17,7 @@ export const ItemDetail = ({id,model,category,img,manufacturer,socket,price,stoc
                     <div className="leftHalf">
                         <div className="pDetTitCont">
                             <h2 className="prodDetTitle">
-                                {model}
+                                {manufacturer} {model}
                             </h2>
                         </div>
                         <div className="detImgCont">

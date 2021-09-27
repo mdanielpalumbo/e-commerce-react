@@ -6,6 +6,7 @@ import { ItemDetailContainer } from './components/ItemDetailContainer/ItemDetail
 import { CartProvider } from "./context/CartContext";
 import { Cart } from "./components/Cart/Cart"
 import { Checkout } from "./components/Checkout/Checkout"
+import { Upload } from "./components/Upload/Upload"
 function App() {
 
 
@@ -32,6 +33,9 @@ function App() {
             </Route>
             <Route exact path="/build">
               <h2 className="prox">Próximamente...</h2>
+            </Route>
+            <Route exact path="/upload">
+              <Upload/>
             </Route>
             <Route path="*">
               <h2 className="prox">404</h2>

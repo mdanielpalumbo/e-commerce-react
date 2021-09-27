@@ -16,6 +16,7 @@
         .counter{
             height:30%;
             width:40%;
+            max-height:40px;
             display:flex;
             flex-flow:row nowrap;
             justify-content:center;
@@ -49,15 +50,14 @@
         }
     }
     .addBtn {
-        height:60%;
+        height:100%;
         width:100%;
-        padding-top:10%;
         display:flex;
         align-items:flex-start;
         justify-content: center;
         .addTo{
-            height:30%;
-            width:65%;
+            height:20%;
+            width:100%;
             border:none;
             background-color:#E91E63;
             color:#F7F7F7;
@@ -72,11 +72,12 @@
     }
 }
 .finish{
-    height: 60%;
+    height: 30%;
     width:90%;
     display:flex;
     margin-right:10%;
-    padding:40% 2% 2% 2%;
+    margin-top:30%;
+    padding:2%;
     align-items:flex-start;
     justify-content: center;
     .finBtn{
