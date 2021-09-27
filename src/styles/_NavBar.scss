@@ -58,8 +58,9 @@ nav{
     font-size:1.5rem;
 }
 .cartWidget{
+
     display:flex;
-    margin-left:2%;
+    margin-left:1%;
     align-items:center;
     justify-content: space-around;
     padding-right:10px;
@@ -69,13 +70,12 @@ nav{
     background:transparent;
     border-color:transparent;
     color:white;
-    cursor:default;
+    cursor:pointer;
     transition: all 0.4s ease-out;
     width:100px;
-    margin-bottom:1%;
 }
 .cartWidget:hover{
-    cursor:default;
+    cursor:pointer;
     color:#E91E63;
     transition: all 0.4s ease;
 }
