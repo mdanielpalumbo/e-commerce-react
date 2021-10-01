@@ -16,11 +16,12 @@
 .detail{
     display:flex;
     flex-flow:column nowrap;
-    height:130vh;
-    width:70vw;
+    height:auto;
+    width:75vw;
     background-color:#161616;
     border-radius:0.25%;
     box-shadow: 0 0 5px #121212;
+    --animate-duration:0.5s;
     .prodDet{
         width:100%;
         height:70vh;
@@ -62,6 +63,7 @@
                     width:75%;
                     height:auto;
                     max-height:100%;  
+                    max-width:90%;
                     box-shadow:5px 5px 5px #121212;
                     filter:saturate(92.5%)contrast(99%)brightness(1.025);
                     opacity:.98;
@@ -110,9 +112,77 @@
         }
         
     }
-    .specs{
-        height:30%;
-    }   
+    .specsContainer{
+        width:90%;
+        margin-right:5%;
+        margin-left:5%;
+        display:flex;
+        flex-flow:column;
+        justify-content: center;
+        align-items:center;
+        margin-bottom:2.5%;
+        .specsTitle{
+            height:10%;
+            width:70%;
+            margin: 2.5% 15% 1% 15%;
+            padding-top:2.5%;
+            text-align:center;
+            text-transform:uppercase;
+            color:#E91E63;
+            border-top: 2px solid #222222;
+            letter-spacing:2px;
+        }
+        .specs{
+            width:100%;
+            min-height:30vh;
+            height:fit-content;
+            display:flex;
+            flex-flow:row wrap;
+            padding-left:2.5%;
+            padding-right:2.5%;
+            margin-bottom:2%;
+            margin-top:2%;
+            .specClass{
+                height:auto;
+                width: 40%;
+                margin-left:5%;
+                margin-right:5%;
+                margin-bottom:2%;
+                .specTitle{
+                    letter-spacing:1px;
+                    font-size:1rem;
+                    text-transform: uppercase;
+                    color:#E91E63;
+                    margin-bottom:5%;
+                    padding-bottom:1%;
+                    box-shadow: 0 1px 0 #E91E63;
+                }
+                .spec{
+                    height:auto;
+                    padding:1%;
+                    display:flex;
+                    flex-flow:row nowrap;
+                    justify-content: space-between;
+                    .key{
+                        text-transform: capitalize;
+                        width:50%;
+                        font-size:0.9rem;
+                        display:flex;
+                        justify-content: flex-start;
+                        align-items:center;
+                    }
+                    .value{
+                        text-transform:capitalize;
+                        width:48%;
+                        font-size:0.9rem;
+                        display:flex;
+                        justify-content:flex-end;
+                        text-align:right;
+                    }
+                }
+            }
+        }
+    }      
 }
 
 

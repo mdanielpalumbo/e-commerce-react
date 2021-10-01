@@ -7,12 +7,8 @@
     margin-top:15vh;
     background-color:#181818;
     box-shadow: 0 0 2px #060606;
+    --animate-duration: 0.5s;
 }
 
-.loading{
-    height:85vh;
-    width:70vw;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-}
+
+

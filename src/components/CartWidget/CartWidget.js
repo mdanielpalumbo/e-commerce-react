@@ -4,13 +4,13 @@ import {FaCartArrowDown} from 'react-icons/fa'
 
 export const CartWidget = () => {
     const [count, setCount] = useState(0)
-    const {cart} = useContext(CartContext)
+    const {cart, prodCount} = useContext(CartContext)
     const cartCount = () => {
         setCount(cart.reduce((acc, prod) => acc + prod.count, 0))
     }
     useEffect(()=>{
         cartCount()
-    },[cart])
+    },[cart, prodCount])
     return (
         <>
             {count === 0 ? <FaCartArrowDown className="cartIcon"/>

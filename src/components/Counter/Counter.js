@@ -3,6 +3,7 @@ import {FaPlus,FaMinus} from 'react-icons/fa'
 import { CartContext } from '../../context/CartContext'
 import {Link} from 'react-router-dom'
 import { useEffect } from 'react/cjs/react.development'
+import "animate.css"
 
 export const Counter = ({max, prod}) => {
 
@@ -38,8 +39,11 @@ export const Counter = ({max, prod}) => {
     return (
             <>
             {exist ? 
-                <div className="finish">
-                    <Link className ="finBtn" to="/cart">Terminar Compra</Link>
+                <div className="finCont">
+                    <div className="empty"></div>
+                    <div className="finish">
+                        <Link className ="finBtn" to="/cart">Terminar Compra</Link>
+                    </div>
                 </div>
                 :
                 <div className="checkout">

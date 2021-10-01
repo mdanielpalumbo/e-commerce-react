@@ -1,16 +1,9 @@
 .detailBody{
     width:100vw;
-    height:150vh;
+    height:auto;
     display:flex;
     flex-flow:column nowrap;
     margin-top:15vh;
     align-items: center;
-}
-.load{
-    margin-top:15vh;
-    height:80vh;
-    width:100%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
+    padding-bottom:2%;
 }

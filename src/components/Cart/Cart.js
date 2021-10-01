@@ -1,31 +1,31 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { CartContext } from '../../context/CartContext'
-import { FaTrash, FaMinus, FaPlus } from 'react-icons/fa'
+import { FaTrash, FaMinus, FaPlus, FaOrcid } from 'react-icons/fa'
 import { useEffect } from 'react/cjs/react.development'
 import swal from 'sweetalert'
 import {Link} from 'react-router-dom'
 
 export const Cart = () => {
 
-    const { cartDelete, cart, total, totalPrice} = useContext(CartContext)
-    
-    const finalise = () => {
-        swal("COMPRA REALIZADA CON EXITO")
-    }
-    //Acá intento hacer funcionar los botones de agregar y restar en el cart. No los tengo resueltos todavía.
-    const add = ({stock,count,id},cart) => {
-        let newCart = cart.map((prod => {
-            if (prod.id === id){
-                if (count<stock){
-                    count++
-                }
+    const { cartDelete, cart, total, totalPrice, setCount, prodCount} = useContext(CartContext)
+
+
+    const add = ({prod}) => {
+        if(prod.count< prod.stock){
+            prod.count ++
+            setCount(prod.count)
+        }    
+    } 
+
+    const subst = ({prod}) => {
+        if (prod.count > 1){
+            prod.count --
+            setCount(prod.count)
         }
-        }))
-        cart = [...newCart]
     }
     useEffect(() => {
         totalPrice()
-    },[cart])
+    },[prodCount])
     return (
         <div className="cartBody">
             <h2 className="cartTitle"> CARRITO </h2>
@@ -45,14 +45,13 @@ export const Cart = () => {
                                     <p className="model">{prod.model}</p>
                                     <div className="cCountCont">    
                                         <div className="cCounter">
-                                            <button type = "button" className="minus"><FaMinus/></button>
+                                            <button type = "button" className="minus" onClick={() => subst({prod})}><FaMinus/></button>
                                             <p className="count">{prod.count}</p>  
-                                            <button type="button" className="plus" onClick={() => add({...prod},cart)}><FaPlus/></button>
+                                            <button type="button" className="plus" onClick={() => add({prod})} ><FaPlus/></button>
                                         </div>
                                     </div>
                                     <span className="price">
-                                        <p></p>
-                                        {prod.price*prod.count}
+                                        <p>{prod.price*prod.count}</p>
                                     </span>    
                                     <button className="cartDelete" onClick={() => cartDelete(prod.id)}><FaTrash/></button>
                                 </div>
@@ -65,11 +64,13 @@ export const Cart = () => {
                         <p className="totaltxt">total:</p>
                         {total}
                     </span>
-                    <Link to="/checkout" className="finaliseLink">
+                    {cart.length === 0 ? <div className="disable"><p>finalizar</p></div> 
+                    :<Link to="/checkout" className="finaliseLink">
                     <div className="finalise">
                         <p>finalizar</p>
                     </div>
-                    </Link>
+                    </Link> }
+                    
                 </div>
             </div>
         </div>

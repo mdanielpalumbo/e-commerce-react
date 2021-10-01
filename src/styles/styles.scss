@@ -10,6 +10,7 @@
 @import 'Checkout';
 @import 'Upload';
 
+
 * {
     margin:0;
     padding:0;
@@ -46,4 +47,31 @@ body {
     letter-spacing: 2px;
     height:10vh;
     background-color: #181818;
+}
+.load{
+    margin-top:15vh;
+    height:80vh;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.loading{
+    height:85vh;
+    width:70vw;
+    font-size: 8rem;
+    color:#F7F7F7;
+    display:flex;
+    flex-flow:column;
+    justify-content: center;
+    align-items: center;
+    --animate-duration:0.2s;
+    .spinner{
+        animation: spin 1.2s ease-in-out infinite;
+    }
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
 }
