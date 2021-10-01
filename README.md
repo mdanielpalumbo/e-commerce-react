@@ -5,7 +5,10 @@ saber la potencia de dicha pc según datos obtenidos de la web.
 
 ## Instalación 
 
-1. Cloná el repositorio en la carpeta deseada.
+1. Cloná el repositorio en la carpeta deseada. Desde la terminal de GIT
+  ```
+  git clone https://github.com/mdanielpalumbo/e-commerce-react
+  ```
 2. En un terminal dentro de la carpeta e-commerce-react usa el comando: 
   ```
     npm install 
