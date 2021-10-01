@@ -3,6 +3,8 @@ import { Redirect } from 'react-router'
 import { CartContext } from '../../context/CartContext'
 import { newOrder } from '../../firebase/newOrder'
 import Swal from 'sweetalert2'
+import { FaShieldAlt } from 'react-icons/fa'
+
 export const Checkout = () => {
     const { cart, total, emptyCart } = useContext(CartContext)
     const [values, setValues] = useState({
@@ -23,7 +25,7 @@ export const Checkout = () => {
                 Swal.fire({
                     icon:'success',
                     title: 'Compra realizada con éxito',
-                    text: `Guarde este identificador:${res}`,
+                    text: `Guarde este identificador: ${res}`,
                     confirmButtonText:'Finalizar'
                 })
                 emptyCart()
@@ -38,36 +40,51 @@ export const Checkout = () => {
                     <h2 className="title">checkout</h2>
                 </div>
                 <div className="formBody">
-                    <form className="checkForm" onSubmit={handleSubmit}>
-                        <input
-                            type="text"
-                            value={values.name}
-                            onChange={handleInputChange}
-                            name="name"
-                            placeholder="nombre"
-                            required
-                        />
-                        
-                        <input
-                            type="text"
-                            value={values.tel}
-                            onChange={handleInputChange}
-                            name="tel"
-                            placeholder="tel: 11-2032-0200"
-                            required
-                        />
-                        
-                        <input
-                            type="email"
-                            value={values.email} 
-                            onChange={handleInputChange}
-                            name="email"
-                            placeholder="example@email.com"
-                            required
-
-                        />
-                        <button type="submit">Realizar orden</button>
-                    </form>
+                    <div className="checkLeft">
+                        <form className="checkForm" onSubmit={handleSubmit}>
+                            <div className="entry">
+                                <label for="name"> Nombre completo</label>
+                                <input
+                                    type="text"
+                                    value={values.name}
+                                    onChange={handleInputChange}
+                                    name="name"
+                                    placeholder="Juan Carlos Oliva"
+                                    required
+                                />
+                            </div>
+                            <div className="entry">
+                                <label>Telefono de contacto</label>
+                                <input
+                                    type="text"
+                                    value={values.tel}
+                                    onChange={handleInputChange}
+                                    name="tel"
+                                    placeholder="tel: 11-2032-0200"
+                                    required
+                                />
+                            </div>
+                            <div className="entry">
+                                <label>Email</label>
+                                <input
+                                    type="email"
+                                    value={values.email} 
+                                    onChange={handleInputChange}
+                                    name="email"
+                                    placeholder="example@email.com"
+                                    required
+                                />
+                            </div>
+                            <button type="submit">Realizar orden</button>
+                        </form>
+                    </div>
+                    <div className="checkRight">
+                        <FaShieldAlt className="secure"/>
+                        <div className="secureText">
+                            <p>seguro envíos</p>
+                            <p>compra con confianza, nosotros nos encargamos de que llegue</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             }

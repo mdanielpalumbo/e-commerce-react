@@ -14,6 +14,7 @@
         justify-content: center;
         
         .counter{
+            min-height:30px;
             height:25%;
             width:35%;
             max-height:40px;
@@ -56,6 +57,7 @@
         align-items:flex-start;
         justify-content: center;
         .addTo{
+            min-height:40px;
             height:20%;
             margin-top:10%;
             width:80%;
@@ -90,6 +92,7 @@
         justify-content: center;
         .finBtn{
             height:20%;
+            min-height:40px;
             margin-top:10%;
             width:80%;
             border:none;

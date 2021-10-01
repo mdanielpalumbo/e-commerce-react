@@ -48,6 +48,14 @@ body {
     height:10vh;
     background-color: #181818;
 }
+.banner{
+    height:10vh;
+    width:100%;
+    background-color: #181818;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .load{
     margin-top:15vh;
     height:80vh;

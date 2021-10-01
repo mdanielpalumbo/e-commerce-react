@@ -1,18 +1,83 @@
 .checkoutBod{
-    margin:15vh 15% 0 15%;
-    width:70vw;
-    height:85vh;
+    margin:20vh 20vw 10vh 20vw;
+    width:60vw;
+    height:70vh;
     background-color:#181818;
+    box-shadow: 0 0 5px #080808;
+    border-radius:5px;
+    .banner{
+        border-radius:5px;
+        height:10%;
+        padding-top:2%;
+    }
     .formBody{
-        height: 75vh;
+        height: 90%;
         width:100%;
-        .checkForm{
-            height:80%;
+        display:flex;
+        .checkLeft{
+            width:30%;
+            height:100%;
+            margin-left:10%;
+            .checkForm{
+                height:100%;
+                width:100%;
+                display:flex;
+                flex-flow:column nowrap;
+                align-items:flex-start;
+                justify-content: space-around;
+                .entry{
+                    display:flex;
+                    flex-flow:column nowrap;
+                    height:15%;
+                    width:100%;
+                    justify-content:space-between;
+                    label{
+                        font-size:0.8rem;
+                        text-transform:uppercase;
+                        letter-spacing: 2px;
+                    }
+                }
+                button{
+                    width:100%;
+                    height:10%;
+                    border:none;
+                    background-color: #E91E63;
+                    margin-top:-10%;
+                    color: #F7F7F7;
+                    text-transform: uppercase;
+                    font-size:0.9rem;
+                    letter-spacing:1px;
+                    border-radius:8px;
+                }
+            }
+        }
+        .checkRight{
+            height:100%;
+            width:60%;
             display:flex;
             flex-flow:column nowrap;
-            align-items:flex-start;
-            justify-content: space-around;
+            padding-top:10%;
+            align-items:center;
+            .secure{
+                font-size:9rem;
+            }
+            .secureText{
+                margin-top:5%;
+                width:65%;
+                text-align:center;
+                height:20%;
+                display:flex;
+                flex-flow:column;
+                justify-content: space-around;
+                text-transform:uppercase;
+                p:first-of-type{
+                    font-size:1.3rem;
+                    color:#E91E63;
+                }
+                p:last-of-type{
+                    font-size:0.9rem;
+                }
+            }
         }
-    }
-    
+    }   
 }

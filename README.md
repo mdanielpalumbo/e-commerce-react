@@ -22,7 +22,13 @@ React-router-dom
 
 react-icons
 
-sweet-alert (swal)
+sweet-alert2 (swal)
+
+node-sass
+
+animate.css
+
+firebase
 
 ## Aplicación 
 
