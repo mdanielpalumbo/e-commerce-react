@@ -34,7 +34,7 @@ export const Counter = ({max, prod}) => {
         if (cart.some(i => i.id === prod.id)){
             setExist(true)
         }
-    },[])
+    },[cart, prod.id])
     
     return (
             <>

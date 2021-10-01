@@ -1,15 +1,12 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import {FaTruck} from 'react-icons/fa'
 import {Counter} from '../Counter/Counter'
-import { collection, getDocs, getDoc, doc } from 'firebase/firestore'
-import {db} from '../../firebase/config'
+
 import "animate.css"
 
-export const ItemDetail = ({specs, item, load}) => {
+export const ItemDetail = ({specs, item}) => {
     const prod = {...item}
-    console.log(prod)
-    console.log(specs)
     
     return (
         <>  { specs ?
@@ -59,7 +56,7 @@ export const ItemDetail = ({specs, item, load}) => {
                                     <h4 className="specTitle">{doc.id}</h4>
                                     <div>
                                         {[...Object.entries(doc)].map(([key, value]) => 
-                                            {if (value != doc.order && value != doc.id){
+                                            {if (value !== doc.order && value !== doc.id){
                                                 return(
                                                 <div className="spec" key={key}>
                                                     <p className="key">{key}:</p> <p className="value">{value}</p>

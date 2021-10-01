@@ -1,8 +1,6 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { CartContext } from '../../context/CartContext'
-import { FaTrash, FaMinus, FaPlus, FaOrcid } from 'react-icons/fa'
-import { useEffect } from 'react/cjs/react.development'
-import swal from 'sweetalert'
+import { FaTrash, FaMinus, FaPlus } from 'react-icons/fa'
 import {Link} from 'react-router-dom'
 
 export const Cart = () => {
@@ -25,7 +23,7 @@ export const Cart = () => {
     }
     useEffect(() => {
         totalPrice()
-    },[prodCount])
+    },[prodCount, totalPrice])
     return (
         <div className="cartBody">
             <h2 className="cartTitle"> CARRITO </h2>
